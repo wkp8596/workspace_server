@@ -1,0 +1,42 @@
+version: (200506)
+
+available memory: 64M bytes
+used memory: 204800 bytes [need 200K bytes if disable swap]
+
+used block: 11 [memory(11) file(0)]
+                 [ 8K(9) 64K(2) { total 200K bytes } ]
+overhead: (9523) bytes for (11) blocks [Average: (865) bytes/block]
+
+write  => 0(times) 0K(bytes) [0K bytes to file]
+read   => 2(times) 110K(bytes) [18K bytes compressed data from file]
+access => 26897(times) 220M(bytes)
+          [hit ratio: 99.9926%]
+
+time: write(0) read(0)  unit: second
+
+swap file directory: (/home/pedu14/wkp/260605_adder_uvm_test/verdiLog)
+used swap file number: (1)
+
+
+
+swap file manager:
+arrSize: (256)
+idxCnt: (4)
+closeHead: (1)
+closeTail: (2)
+openCnt: (2)
+fid(3): fd(0) fileName(/home/pedu14/wkp/260605_adder_uvm_test/simv.daidir/kdb.elab++/work.lib++/uvm_custom_install_verdi_recorder.sv.tdc)
+	size(15795) lastModTime(1780648435) curModTime(1780648435)
+	mode(rb)	hot(0) cool(0) pos(0)
+fid(2): fd(22) fileName(/home/pedu14/wkp/260605_adder_uvm_test/verdiLog/_swap_0001#478980509#1718197)
+	size(0) lastModTime(0) curModTime(1780648454)
+	mode(w+b)	hot(0) cool(1) pos(0)
+fid(1): fd(1073741824) fileName(/home/pedu14/wkp/260605_adder_uvm_test/simv.daidir/kdb.elab++/work.lib++/tb_adder.sv.tdc)
+	size(22603) lastModTime(1780648435) curModTime(1780648435)
+	mode(rb)	hot(2) cool(0) pos(0)
+fid(0): fd(0) fileName(NULL)
+	mode(NULL)	hot(0) cool(0) pos(0)
+==================================================
+mySelf(0x20ffcc70) pre(0x23452b00) next((nil))
+version(200506)
+date(Mar  1 2025 20:26:47)

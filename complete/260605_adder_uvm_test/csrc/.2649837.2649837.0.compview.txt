@@ -1,0 +1,6 @@
+Command exited with non-zero status 127
+{"vcs1":{"timestamp_begin":1780663480.053574236, "rt":0.00, "ut":0.00, "st":0.00}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1780663479.649647350}
+{"VCS_COMP_START_TIME": 1780663479.649647350}
+{"VCS_COMP_END_TIME": 1780663480.092627058}
+{"VCS_USER_OPTIONS": "-sverilog -debug_access+all -kdb -lca -ntb_opts uvm-1.2 -timescale=1ns/1ps -o simv ./tb/tb_adder.sv ./rtl/adder.sv"}

@@ -1,0 +1,9 @@
+simSetSimulator "-vcssv" -exec "./simv" -args
+debImport "-dbdir" "./simv.daidir/"
+debLoadSimResult /home/pedu14/wkp/260604_ram/wave.fsdb
+wvCreateWindow
+verdiSetActWin -win $_nWave2
+verdiWindowResize -win $_Verdi_1 "1058" "328" "1227" "902"
+verdiWindowResize -win $_Verdi_1 "245" "269" "1227" "902"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+debExit

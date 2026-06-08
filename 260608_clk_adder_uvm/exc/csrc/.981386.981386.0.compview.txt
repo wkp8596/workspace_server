@@ -1,0 +1,7 @@
+Command exited with non-zero status 255
+{"vcs1":{"timestamp_begin":1780901107.563460410, "rt":1.06, "ut":1.19, "st":0.08}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1780901107.146872789}
+{"VCS_COMP_START_TIME": 1780901107.146872789}
+{"VCS_COMP_END_TIME": 1780901108.672768840}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -ntb_opts uvm-1.2 -timescale=1ns/1ps -debug_access+all -kdb -lca -o simv ../tb/tb_adder.sv ../rtl/adder.sv"}
+{"vcs1": {"peak_mem": 474740}}

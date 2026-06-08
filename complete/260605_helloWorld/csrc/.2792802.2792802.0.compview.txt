@@ -1,0 +1,6 @@
+Command exited with non-zero status 127
+{"vcs1":{"timestamp_begin":1780633652.570072710, "rt":0.00, "ut":0.00, "st":0.00}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1780633652.124710354}
+{"VCS_COMP_START_TIME": 1780633652.124710354}
+{"VCS_COMP_END_TIME": 1780633652.612394904}
+{"VCS_USER_OPTIONS": "-full -sverilog -debug_access+all -kdb -lca -ntb_opts uvm -timescale=1ns/1ps -0 simv helloWorld.sv"}

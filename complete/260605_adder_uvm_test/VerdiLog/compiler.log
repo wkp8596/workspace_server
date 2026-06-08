@@ -1,0 +1,39 @@
+*design* DebussyLib (btIdent Verdi_X-2025.06-1)
+Command arguments:
+    +define+verilog
+    KDB
+    elaboration
+    done
+    and
+    the
+    database
+    successfully
+    generated
+
+
+*Error* failed to open source file "KDB" with read access: No such file or directory
+
+
+*Error* failed to open source file "elaboration" with read access: No such file or directory
+
+
+*Error* failed to open source file "done" with read access: No such file or directory
+
+
+*Error* failed to open source file "and" with read access: No such file or directory
+
+
+*Error* failed to open source file "the" with read access: No such file or directory
+
+
+*Error* failed to open source file "database" with read access: No such file or directory
+
+
+*Error* failed to open source file "successfully" with read access: No such file or directory
+
+
+*Error* failed to open source file "generated" with read access: No such file or directory
+
+Highest level modules:
+
+Total	8 error(s),   0 warning(s)

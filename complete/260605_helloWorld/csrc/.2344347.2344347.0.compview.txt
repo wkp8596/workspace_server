@@ -1,0 +1,6 @@
+Command exited with non-zero status 255
+{"comelab":{"timestamp_begin":1780633289.250957550, "rt":0.63, "ut":0.30, "st":0.39}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1780633288.852321281}
+{"VCS_COMP_START_TIME": 1780633288.852321281}
+{"VCS_COMP_END_TIME": 1780633289.910990155}
+{"VCS_USER_OPTIONS": "-full64 -sverilog -debug_access+all -kdb -lca -ntp_opts uvm -timescale=1ns/1ps -o helloWorld.sv"}
