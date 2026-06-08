@@ -1,0 +1,26 @@
+# VCS build output
+csrc/
+simv
+simv.daidir/
+
+# Waveform & logs
+*.fsdb
+*.log
+**/verdiLog/
+novas.conf
+novas.rc
+
+# EDA misc
+ucli.key
+vc_hdrs.h
+vc_hdrs.c
+tr_db.log
+novas_dump.log
+
+# Temp files
+*.key
+*.ses
+*.ses.config
+*.ses.png
+*.cmd
+*.bak
