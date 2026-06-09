@@ -1,9 +1,0 @@
-vcs -full64 -sverilog -debug_access+all -kdb -lca -ntb_opts uvm-1.2 -timescale=1ns/1ps -o simv ../rtl/.sv ../tb/.sv
-
-./simv
-
-verdi -dbdir ./simv.daidir/ -ssf wave.fsdb
-
-bashgit add .
-git commit -m ""
-git push
