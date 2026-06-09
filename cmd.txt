@@ -3,3 +3,7 @@ vcs -full64 -sverilog -debug_access+all -kdb -lca -ntb_opts uvm-1.2 -timescale=1
 ./simv
 
 verdi -dbdir ./simv.daidir/ -ssf wave.fsdb
+
+bashgit add .
+git commit -m ""
+git push

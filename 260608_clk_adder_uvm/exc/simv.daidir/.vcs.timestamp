@@ -669,11 +669,11 @@
 uvm-1.2
 simv
 /tools/synopsys/verdi/X-2025.06-1/share/PLI/VCS/LINUX64/verdi.tab
-../tb/tb_adder.sv
 ../rtl/adder.sv
+../tb/tb_adder.sv
 60
 which_declare=declare -f
-XDG_SESSION_ID=2438
+XDG_SESSION_ID=2539
 XDG_RUNTIME_DIR=/run/user/1024
 XDG_DATA_DIRS=/home/pedu14/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 XAUTHORITY=/home/pedu14/.Xauthority
@@ -698,9 +698,9 @@ TOOL_HOME=/tools/synopsys/vcs/W-2024.09-SP2/linux64
 S_COLORS=auto
 SYN_HOME=/tools/synopsys/syn/W-2024.09-SP5-2
 STARRC_HOME=/tools/synopsys/starrc/W-2024.09-SP4-1
-SSH_TTY=/dev/pts/52
-SSH_CONNECTION=10.10.20.15 60623 10.10.20.251 20022
-SSH_CLIENT=10.10.20.15 60623 20022
+SSH_TTY=/dev/pts/43
+SSH_CONNECTION=10.10.20.15 52843 10.10.20.251 20022
+SSH_CLIENT=10.10.20.15 52843 20022
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SPYGLASS_HOME_DIR=/tools/synopsys/spyglass/X-2025.06-1/SPYGLASS_HOME
 SNPS_VERDI_INTERNAL_LP_XML_NEW_FLOW=1
@@ -728,7 +728,7 @@ GROUP=pedu14
 GDK_BACKEND=x11
 FS_HOME_DIR=/tools/synopsys/fusioncompiler/X-2025.06-SP3
 FM_HOME=/tools/synopsys/fm/W-2024.09-SP4-1
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-A4cJ9UE0CM,guid=0cd1644f7c2be1730599fc3a6a263d16
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-6P0Yjoji8Q,guid=5b8c95c29904024eb0faa4eb6a275864
 CUSTOM_COMPILER=/tools/synopsys/customcompiler/W-2024.09-SP2-3
 CALIBRE_HOME=/tools/siemens/calibre/aok_cal_2024.3_16.10
 BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
@@ -896,8 +896,8 @@ BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty
 1740892348 /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/macros/uvm_global_defines.svh
 1740892348 /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/macros/uvm_version_defines.svh
 1740892349 /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/uvm_macros.svh
+1780971270 ../tb/tb_adder.sv
 1780886821 ../rtl/adder.sv
-1780901250 ../tb/tb_adder.sv
 1740892349 /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv
 1740892349 /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv
 1740892348 /tools/synopsys/vcs/W-2024.09-SP2/etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv
@@ -911,5 +911,5 @@ BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty
 1740889567 /tools/synopsys/vcs/W-2024.09-SP2/linux64/lib/liberrorinf.so
 1740889560 /tools/synopsys/vcs/W-2024.09-SP2/linux64/lib/libsnpsmalloc.so
 1740889556 /tools/synopsys/vcs/W-2024.09-SP2/linux64/lib/libvfs.so
-1780901259 simv.daidir
+1780971282 simv.daidir
 -1 partitionlib

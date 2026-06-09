@@ -25,7 +25,6 @@ class adder_seq_item extends uvm_sequence_item;
 	function string convert2string();
 		return $sformatf("a = %0d, b = %0d, y = %0d", a, b, y);
 	endfunction
-
 endclass
 
 class adder_sequence extends uvm_sequence #(adder_seq_item);
@@ -48,7 +47,46 @@ class adder_sequence extends uvm_sequence #(adder_seq_item);
 			`uvm_info(get_type_name(), $sformatf("[%0d/%0d] %s", i + 1, loop_count, item.convert2string()), UVM_HIGH)
 		end
 	endtask
+endclass
 
+class adder_component1 extends uvm_component;
+	`uvm_component_utils(adder_component1)
+	uvm_analysis_imp #(adder_seq_item, adder_component1) ap_imp_comp1;
+
+	function new(string name, uvm_component c);
+		super.new(name, c);
+		ap_imp_comp1 = new("ap_imp_1", this);
+	endfunction
+
+	virtual function void write(adder_seq_item item);
+        `uvm_info(get_type_name(), $sformatf("         ap_imp_comp1: %s", item.convert2string()), UVM_MEDIUM)
+	endfunction
+endclass
+
+class adder_component2 extends uvm_component;
+	`uvm_component_utils(adder_component2)
+	uvm_analysis_imp #(adder_seq_item, adder_component2) ap_imp_comp2;
+
+	function new(string name, uvm_component c);
+		super.new(name, c);
+		ap_imp_comp2 = new("ap_imp_2", this);
+	endfunction
+
+	virtual function void write(adder_seq_item item);
+        `uvm_info(get_type_name(), $sformatf("         ap_imp_comp2: %s", item.convert2string()), UVM_MEDIUM)
+	endfunction
+endclass
+
+class adder_subscriber extends uvm_subscriber #(adder_seq_item);
+	`uvm_component_utils(adder_subscriber)
+
+	function new(string name, uvm_component c);
+		super.new(name, c);
+	endfunction
+
+	virtual function void write(adder_seq_item item);
+		`uvm_info(get_type_name(), $sformatf("			adder_subscriber: %s", item.convert2string()), UVM_MEDIUM)
+	endfunction
 endclass
 
 class adder_scoreboard extends uvm_scoreboard;
@@ -78,13 +116,13 @@ class adder_scoreboard extends uvm_scoreboard;
 
 	virtual function void write(adder_seq_item item);
 		`uvm_info(get_type_name(), $sformatf("Received: %s", item.convert2string()), UVM_MEDIUM)
-		if (item.y === item.a + item.b) begin
-			`uvm_info(get_type_name(), $sformatf("Matched!: y: %0d === a: %0d + b: %0d", item.y, item.a, item.b ), UVM_MEDIUM)
-			pass_count++;
-		end else begin
-			`uvm_error(get_type_name(), $sformatf("Mismatched!: y: %0d === a: %0d + b: %0d", item.y, item.a, item.b ))
-			fail_count++;
-		end
+		 if (item.y === item.a + item.b) begin
+		 	//  `uvm_info(get_type_name(), $sformatf("Matched!: y: %0d === a: %0d + b: %0d", item.y, item.a, item.b ), UVM_MEDIUM)
+		 	pass_count++;
+		 end else begin
+		    //  `uvm_error(get_type_name(), $sformatf("Mismatched!: y: %0d === a: %0d + b: %0d", item.y, item.a, item.b ))
+		 	fail_count++;
+		 end
 	endfunction
 
 	virtual function void report_phase(uvm_phase phase);
@@ -181,7 +219,6 @@ class adder_monitor extends uvm_monitor;
 
 	virtual function void report_phase(uvm_phase phase);
 	endfunction
-
 endclass
 
 class adder_agent extends uvm_agent;
@@ -219,6 +256,9 @@ class adder_env extends uvm_env;
 
 	adder_agent agt;
 	adder_scoreboard scb;
+	adder_component1 cmp1;
+	adder_component2 cmp2;
+	adder_subscriber subs;
 
 	function new(string name, uvm_component c);
 		super.new(name, c);
@@ -228,11 +268,17 @@ class adder_env extends uvm_env;
 		super.build_phase(phase);
 		agt = adder_agent::type_id::create("agt", this);
 		scb = adder_scoreboard::type_id::create("scb", this);
+		cmp1 = adder_component1::type_id::create("cmp1", this);
+		cmp2 = adder_component2::type_id::create("cmp2", this);
+		subs = adder_subscriber::type_id::create("subs", this);
 	endfunction
 
 	virtual function void connect_phase(uvm_phase phase);
 		super.connect_phase(phase);
 		agt.mon.ap.connect(scb.ap_imp);
+		agt.mon.ap.connect(cmp1.ap_imp_comp1);
+		agt.mon.ap.connect(cmp2.ap_imp_comp2);
+		agt.mon.ap.connect(subs.analysis_export);
 	endfunction
 
 	virtual task run_phase(uvm_phase phase);
