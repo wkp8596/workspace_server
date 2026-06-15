@@ -1,0 +1,4 @@
+\$unit::../rtl/spi_master.sv::../tb/spi_if.sv...@1824701940 02
+tb_top4070
+uvm_custom_install_recording4070
+uvm_custom_install_verdi_recording4070

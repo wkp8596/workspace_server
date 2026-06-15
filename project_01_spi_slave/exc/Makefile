@@ -1,11 +1,11 @@
 VCS_OPTS   = -full64 -sverilog
 VCS_OPTS  += -ntb_opts uvm-1.2
-VCS_OPTS  += -tiemscale=1ns/1ps
+VCS_OPTS  += -timescale=1ns/1ps
 VCS_OPTS  += -debug_access+all -kdb -lca
 VCS_OPTS  += -cm line+cond+fsm+tgl+branch+assert
 VCS_OUTPUT = -o simv
 VCS_INCDIR = +incdir+../tb +incdir+../rtl
-VCS_SRC_FILES = ../rtl/.sv ../tb/intf.sv ../tb/pkg.sv ../tb/tb_top.sv
+VCS_SRC_FILES = ../rtl/spi_slave.sv ../tb/spi_if.sv ../tb/spi_pkg.sv ../tb/spi_tb_top.sv
 
 TEST ?= _basic_test
 SEED ?= 1
