@@ -13,7 +13,7 @@ class coverage extends uvm_subscriber#(seq_item);
 	endfunction
 
 	function void build_phase(uvm_phase phase);
-		super.build_phase(pahse);
+		super.build_phase(phase);
 	endfunction
 
 	function void write(seq_item t);
@@ -22,7 +22,7 @@ class coverage extends uvm_subscriber#(seq_item);
 	endfunction
 
 	function void connect_phase(uvm_phase phase);
-		super.connect_phase(pahse);
+		super.connect_phase(phase);
 	endfunction
 
 	task run_phase(uvm_phase phase);

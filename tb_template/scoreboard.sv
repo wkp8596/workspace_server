@@ -12,11 +12,11 @@ class scoreboard extends uvm_scoreboard;
 	endfunction
 
 	function void build_phase(uvm_phase phase);
-		super.build_phase(pahse);
+		super.build_phase(phase);
 	endfunction
 
 	function void connect_phase(uvm_phase phase);
-		super.connect_phase(pahse);
+		super.connect_phase(phase);
 	endfunction
 
 	virtual void function void write(seq_item item);

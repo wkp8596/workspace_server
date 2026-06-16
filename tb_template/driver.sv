@@ -8,13 +8,13 @@ class driver extends uvm_driver#(seq_item);
 	endfunction
 
 	function void build_phase(uvm_phase phase);
-		super.build_phase(pahse);
+		super.build_phase(phase);
 		if (!uvm_config_db#(virtual intf)::get(this, "", "itf", itf))
 			`uvm_fatal(get_type_name(), "virtual interface can't find in config_db.")
 	endfunction
 
 	function void connect_phase(uvm_phase phase);
-		super.connect_phase(pahse);
+		super.connect_phase(phase);
 	endfunction
 
 	task run_phase(uvm_phase phase);
