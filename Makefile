@@ -14,6 +14,8 @@ INFO_LEVEL ?= UVM_MEDIUM
 WKP_DIR ?= ./
 PROJECT ?= project_
 
+GIT ?= "test"
+
 SIMV_OPTS  = +UVM_TESTNAME=$(TEST)
 SIMV_OPTS += +UVM_VERBOSITY=$(INFO_LEVEL)
 SIMV_OPTS += +ntb_randome_seed = $(SEED)
@@ -21,7 +23,7 @@ SIMV_OPTS += -cm line+cond+fsm+tgl+branch+assert
 SIMV_OPTS += -cm_dir coverage.vdb
 SIMV_OPTS += -cm_name sim1
 
-.PHONY: all comp simv clean gen
+.PHONY: all comp simv clean gen push
 
 all: simv
 
@@ -57,3 +59,8 @@ gen:
 	@cp tb_template/test.sv      	$(WKP_DIR)/tb/$(PROJECT)_test.sv      
 	@cp tb_template/tb_top.sv    	$(WKP_DIR)/tb/$(PROJECT)_tb_top.sv    
 	@cp tb_template/template.sv		$(WKP_DIR)/tb/$(PROJECT)_template.sv	
+
+push:
+	@git add .
+	@git commit -m $(GIT)
+	git push
